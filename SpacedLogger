@@ -1,0 +1,28 @@
+package Week5_Assignment;
+
+import java.util.Date;
+
+public class SpacedLogger implements Logger {
+
+	@Override
+	public void Log(String log) {
+	Date date = new Date();
+	String input = log;
+	String spacedLog = input.replaceAll("", " ");
+	
+	System.out.println(date.toString() + spacedLog );
+		
+	}
+
+	@Override
+	public void Error(String error) {
+		Date date = new Date();
+		String input = error;
+		String spacedError = input.replaceAll("", " ");
+		
+		System.out.println(date.toString() + spacedError);
+		
+		
+	}
+
+}
