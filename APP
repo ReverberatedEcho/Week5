@@ -1,0 +1,36 @@
+package Week5_Assignment;
+
+public class APP {
+	
+	static Logger Logger;
+
+	public static void main(String[] args) {
+		
+		Logger logger1 = new AsteriskLogger();
+		Logger logger2 = new SpacedLogger();
+		
+		logger2.Log("Hello");
+		logger2.Log("Try again");
+		
+		logger1.Log("Hello");
+		logger1.Error("Try again");
+		
+		setLogger(new AsteriskLogger());
+		setLogger(new SpacedLogger());
+		
+		
+
+	}
+
+	private static void setLogger(SpacedLogger spacedLogger) {
+		Logger = spacedLogger;
+
+		
+	}
+
+	private static void setLogger(AsteriskLogger asteriskLogger) {
+		Logger = asteriskLogger;
+		
+	}
+
+}
